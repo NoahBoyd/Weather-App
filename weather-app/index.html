@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/app.js"></script>
+    <title>Weather App</title>
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="app">
+
+                <div class="top-row">
+                    <div id="DigitalCLOCK" class="clock" onload="showTime()">
+                        
+                    </div>
+                    <div class="location-date">
+                        <span class="location"></span>
+                        <span class="date"></span>
+                    </div>
+                    <img class="refresh-button icon" src="images/icons/wi-refresh.svg" alt="">
+                    <div class="swap-deg"><span class="celcius active-deg">°C</span> / <span class="farenheit">°F</span></div>
+                </div>
+
+                <div class="weather-status">
+                    <div class="icon-status">
+                        <img src="images/icons/wi-Clouds.svg" alt="" class="current-weather-icon icon">
+                        <span class="current-weather-string"></span><!--<span class="desc"></span>-->
+                    </div>
+                    <div class="temp">
+                        <span class="current-weather-temp">0</span>
+                        <img class="tempSymbol icon" src="images/icons/wi-celsius.svg">
+                    </div>
+                </div>
+
+                <div class="bottom-row">
+                    <div class="bottom-left">
+                        <div class="humidity flex-column">
+                            <img class="bottom-row-icon icon" src="images/icons/wi-raindrops.svg" alt="">
+                            <span class="humidity-level">0%</span>
+                        </div>
+    
+                        <div class="wind-speed flex-column">
+                            <img class="bottom-row-icon icon" src="images/icons/wi-strong-wind.svg" alt="">
+                            <span class="current-wind-speed">0 mph</span>
+                        </div>
+                    </div>
+
+                    <div class="bottom-right">
+                        <div class="sun-up flex-column">
+                            <img class="bottom-row-icon icon" src="images/icons/wi-sunrise.svg" alt="">
+                            <span class="sunrise-time">0:00 AM</span>
+                        </div>
+    
+                        <div class="sun-down flex-column">
+                            <img class="bottom-row-icon icon" src="images/icons/wi-sunset.svg" alt="">
+                            <span class="sunset-time">0:00 PM</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bottom-section">
+                <div class="address">
+                    <input class="address-input" type="text" placeholder="Name of City">
+                    <button class="address-submit"><img src="images/right-arrow.png" alt=""></button>
+                </div>
+                <div class="selectors">
+                    <select name="region-state" id="region-state"></select>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

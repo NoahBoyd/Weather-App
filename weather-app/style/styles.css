@@ -1,0 +1,380 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #505050;
+}
+
+.main {
+    height: 100vh;
+    background-color: #505050;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+width: fit-content;   
+}
+
+
+/************App*************/
+.app {
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    opacity: 80%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 8px #1d1d1d;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.top-row {
+    position: relative;
+    display: flex;
+}
+
+.clock {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.location-date {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.top-row img {
+    position: absolute;
+    right: 5px;
+    height: 40px;
+    top: -2px;
+    cursor: pointer;
+}
+
+.swap-deg {
+    position: absolute;
+    right: 5px;
+    top: 40px;
+    font-size: 90%;
+    border: 2px solid black;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: #e2dfdf80;
+    cursor: pointer;
+}
+
+.swap-deg:hover {
+    background-color: #f5eeee;
+}
+
+.active-deg {
+    color: rgb(255, 0, 0);
+}
+
+.weather-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.current-weather-temp {
+    margin: 0 auto;
+    font-size: 200%;
+    position: relative;
+}
+/************icon*************/
+
+.icon-status {
+    margin: 0 auto;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+}
+
+.current-weather-icon {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    height: 120px;
+    margin: 0 auto;
+    z-index: 10000;
+}
+
+.weather-status .current-weather-string {
+    margin: 0 auto;
+    margin-top: 110px;
+    font-size: 1.5rem;
+}
+
+/************temp*************/
+
+.temp {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+}
+
+.temp  img{
+    position: absolute;
+    top: -10%;
+    left: 70%;
+    height: 50px;
+}
+
+/************Bottom row*************/
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    font-size: 70%;
+}
+
+.bottom-left {
+    display: flex;
+    gap: 16px;
+    margin-top: -5px;
+    width: 50%;
+    justify-content: center;
+}
+
+.humidity {
+
+}
+
+.wind-speed {
+
+}
+
+.bottom-right {
+    display: flex;
+    margin-left: 10px;
+    gap: 16px;
+    margin-top: -5px;
+    width: 50%;
+    justify-content: center;
+}
+
+.sun-up {
+
+}
+
+.sun-down {
+
+}
+
+.bottom-row-icon {
+    height: 40px;
+}
+
+/************Address*************/
+
+.address {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    gap: 10px;
+}
+
+.address input {
+    height: 100%;
+    border: none;
+    font-size: 150%;
+    width: 70%;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: clamp(1rem, 1vw, 3rem);
+    box-shadow: 10px 10px 8px #1d1d1d;
+    justify-self: flex-start;
+}
+
+.address button {
+    height: 100%;
+    border-radius: 10px;
+    padding: 0 1rem;
+    box-shadow: 10px 10px 8px #1d1d1d;
+}
+
+.address img {
+    height: 60%;
+    width: 80%;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+#region {
+    /* display: none; */
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 10px 10px 8px #1d1d1d;
+}
+
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#region-state {
+    display: none;
+    height: 2.5rem;
+    width: 70%;
+    max-width: 70%;
+    border-radius: 10px;
+    margin-left: 3%;
+    box-shadow: 10px 10px 8px #1d1d1d;
+}
+
+/* #choices {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 8%;  
+    height: 2.5rem;
+    width: 70%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 10px 10px 8px #1d1d1d;
+} */
+
+/************Tablet*************/
+
+@media only screen and (min-width: 768px) {
+    .app {
+        height: 500px;
+        width: 500px;
+    }
+
+    /************icon*************/
+
+    .icon-status {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .current-weather-icon {
+        position: absolute;
+        top: 12%;
+        left: 30%;
+        height: 210px;
+        margin: 0 auto;
+    }
+
+    .weather-status .current-weather-string {
+        margin: 0 auto;
+        margin-top: 200px;
+        font-size: 1.7rem;
+    }
+
+    .address {
+        width: 500px;
+    }
+
+    .address input {
+        font-size: clamp(1rem, 2vw, 3rem);
+    }
+
+    /************temp*************/
+
+    .current-weather-temp {
+        margin: 0 auto;
+        font-size: 4rem;
+    }
+
+    .temp {
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+    }
+
+    .temp  img{
+        position: absolute;
+        top: 0%;
+        left: 75%;
+        height: 70px;
+    }
+
+    /************Bottom row*************/
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .bottom-row {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        font-size: 90%;
+    }
+
+    .bottom-left {
+        display: flex;
+        gap: 16px;
+        margin-top: -5px;
+        width: 50%;
+        justify-content: center;
+    }
+
+    .humidity {
+
+    }
+
+    .wind-speed {
+
+    }
+
+    .bottom-right {
+        display: flex;
+        margin-left: 10px;
+        gap: 16px;
+        margin-top: -5px;
+        width: 50%;
+        justify-content: center;
+    }
+
+    .sun-up {
+
+    }
+
+    .sun-down {
+
+    }
+
+    .bottom-row-icon {
+        height: 60px;
+    }
+    
+    #region-state {
+        margin-left: 7.5%;
+        width: 70.5%;
+    }
+}
+
+/************Laptop*************/
+
+@media only screen and (min-width: 1200px) {
+
+}
